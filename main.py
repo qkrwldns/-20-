@@ -69,7 +69,7 @@ class MovieTable(QTableWidget):
             pixmap = download_image(img_path)
             if not pixmap.isNull():
                 label = QLabel()
-                label.setPixmap(pixmap.scaled(50, 75, Qt.KeepAspectRatio))
+                label.setPixmap(pixmap.scaled(95, 95, Qt.KeepAspectRatio))
                 self.setCellWidget(row, 1, label)
 
 
@@ -83,7 +83,7 @@ def main():
     window = QWidget()
     window.setLayout(layout)
     window.setWindowTitle("실시간 영화 순위")
-    window.resize(605, 975)  # 창의 크기를 800x600으로 설정
+    window.resize(610, 975)  # 창의 크기를 800x600으로 설정
     window.show()
 
     sys.exit(app.exec_())
